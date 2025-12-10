@@ -11,14 +11,17 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::create('pengguna', function (Blueprint $table) {
-        $table->id();
-        $table->string('nama',150);
-        $table->string('username',100)->unique();
-        $table->string('kata_sandi');
-        $table->enum('peran',['admin','pelanggan']);
-        $table->timestamps();
-    });
+    // Only create the table if it doesn't already exist to avoid errors
+    if (! Schema::hasTable('pengguna')) {
+        Schema::create('pengguna', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama',150);
+            $table->string('username',100)->unique();
+            $table->string('kata_sandi');
+            $table->enum('peran',['admin','pelanggan']);
+            $table->timestamps();
+        });
+    }
 }
 
 
@@ -27,6 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('penggunas');
+        // Ensure we drop the correct table name
+        Schema::dropIfExists('pengguna');
     }
 };

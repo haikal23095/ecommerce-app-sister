@@ -22,16 +22,16 @@
         @csrf
 
         <div class="mb-3">
-            <label>Username</label>
-            <input class="form-control" name="username">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" placeholder="contoh@email.com" required>
         </div>
 
         <div class="mb-3">
             <label>Password</label>
-            <input type="password" class="form-control" name="kata_sandi">
+            <input type="password" class="form-control" name="password" required>
         </div>
 
-        <button class="btn btn-primary w-100">Login</button>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
 </div>
 

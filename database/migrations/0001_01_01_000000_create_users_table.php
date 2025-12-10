@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            
+            // PERUBAHAN DI SINI: Menambahkan kolom peran sesuai database Anda
+            $table->enum('peran', ['admin', 'user']); 
+            
             $table->rememberToken();
             $table->timestamps();
         });
