@@ -74,7 +74,7 @@
     @if(!request('search'))
     <div class="bg-light py-5 mb-5 text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Selamat Datang di Toko Kami</h1>
+            <h1 class="display-4 fw-bold">Selamat Datang di Toko Kami 2</h1>
             <p class="lead text-muted">Temukan produk terbaik dengan harga terjangkau.</p>
         </div>
     </div>

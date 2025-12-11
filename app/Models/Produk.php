@@ -10,13 +10,12 @@ class Produk extends Model
 
     // Jika tabel produk tidak memiliki kolom created_at/updated_at
     public $timestamps = false;
-    
+
     // Sesuaikan dengan nama kolom di tabel produk Anda
     protected $fillable = [
-        'nama_produk', 
-        'harga', 
-        'stok', 
-        'deskripsi', 
+        'nama_produk',
+        'harga',
+        'stok',
         'gambar'
     ];
 }
